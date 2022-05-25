@@ -1,0 +1,17 @@
+{
+  "printWidth": 100,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "jsxBracketSameLine": false,
+  "jsxSingleQuote": false,
+  "overrides": [
+    {
+      "files": ["*.html", "legacy/**/*.js"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}

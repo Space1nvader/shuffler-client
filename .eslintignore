@@ -1,0 +1,29 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+report.*
+
+# Coverage directory
+coverage
+
+
+# IDEA & MacOS
+.idea
+.vscode
+.DC_Store
+dump.rdb
+
+# Build directory
+dist
+
+# Dependency directories
+node_modules/
+
+#Project configs
+Dockerfile
+Jenkinsfile
+nginx.conf
+.env
