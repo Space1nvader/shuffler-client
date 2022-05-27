@@ -1,5 +1,5 @@
 {
-  "name": "tmp",
+  "name": "kicker-webclient",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -38,6 +38,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
+    "axios": "^0.27.2",
     "eslint": "7.32.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.3.0",
@@ -47,6 +48,8 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
+    "mobx": "^6.6.0",
+    "mobx-react-lite": "^3.4.0",
     "sass": "^1.45.2"
   }
 }
