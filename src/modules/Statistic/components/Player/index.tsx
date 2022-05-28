@@ -12,9 +12,9 @@ const Player: React.FC<IPlayer> = (props) => {
   const { name, id, score } = props;
 
   return (
-    <Link to={`${id}`} className={s.player}>
+    <Link to={`${id}`} title={`Просмотреть историю ${name}`} className={s.player}>
       <div className={s.content}>
-        <span className={s.name}>{name}</span> <span>{score}</span>
+        <span className={s.name}>{name}</span> <span className={s.score}>{score}</span>
       </div>
     </Link>
   );

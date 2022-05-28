@@ -1,21 +1,29 @@
+.name {
+  color: var(--orange-50);
+  transition: color 0.2s;
+}
 .player {
   margin-bottom: 0.5rem;
   display: flex;
+  align-items: center;
   width: 100%;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
   color: var(--gray-80);
   position: relative;
   counter-increment: ladder;
   border-bottom: 1px solid var(--gray-70);
   &::before {
+    font-size: 0.9rem;
+    color: var(--gray-40);
     content: counter(ladder) '.';
   }
+  &:hover .name {
+    color: var(--orange-60);
+  }
 }
-.name {
-  color: var(--orange-50);
-}
+
 .content {
-  padding-left: 1rem;
+  padding-left: 0.8rem;
   box-sizing: border-box;
   width: 100%;
   display: flex;

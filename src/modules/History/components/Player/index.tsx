@@ -7,10 +7,8 @@ import s from './index.module.scss';
 const Player = (props: IPlayer) => {
   const { id: playerId, name } = props;
   const { id } = useParams();
-  console.log(Number(id), playerId);
 
   const isCurrent = Number(id) === playerId;
-  console.log(isCurrent);
 
   return <div className={clsx(s.player, isCurrent && s.current)}>{name}</div>;
 };
