@@ -1,0 +1,16 @@
+.team {
+  margin: 0.2rem 0 1rem;
+  width: 43%;
+  position: relative;
+  &:nth-child(even) {
+    text-align: right;
+  }
+}
+.icon {
+  position: absolute;
+  width: 0.8rem;
+  bottom: calc(100% + 2px);
+  left: calc(50% - 0.4rem);
+  fill: var(--orange-50);
+  //   background-color: yellow;
+}

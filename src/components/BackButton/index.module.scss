@@ -1,0 +1,8 @@
+.button {
+  display: flex;
+  min-width: 2rem;
+  max-width: 2rem;
+  & > svg {
+    fill: var(--orange-50);
+  }
+}

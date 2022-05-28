@@ -1,0 +1,7 @@
+{
+  "React framework template": {
+    "prefix": "ims",
+    "body": ["import s from './index.module.scss'"],
+    "description": "Import index style module"
+  }
+}

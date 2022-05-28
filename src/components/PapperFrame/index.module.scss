@@ -1,0 +1,26 @@
+.frame {
+  position: relative;
+  max-width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: var(--gray-10);
+  color: var(--gray-100);
+  border-radius: 6px;
+  border: 1px solid var(--gray-90);
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 6px;
+    left: 6px;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background-color: var(--orange-50);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .frame {
+    padding: 2rem 1rem;
+  }
+}

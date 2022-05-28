@@ -1,11 +1,23 @@
 .player {
+  margin-bottom: 0.5rem;
   display: flex;
   width: 100%;
-  justify-content: space-between;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--gray-70);
+  padding-bottom: 0.5rem;
+  color: var(--gray-80);
+  position: relative;
   counter-increment: ladder;
+  border-bottom: 1px solid var(--gray-70);
   &::before {
-    content: counter(ladder);
+    content: counter(ladder) '.';
   }
+}
+.name {
+  color: var(--orange-50);
+}
+.content {
+  padding-left: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

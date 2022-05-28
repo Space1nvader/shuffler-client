@@ -1,0 +1,14 @@
+.player {
+  margin-bottom: 0.2rem;
+  color: var(--gray-60);
+  &.current {
+    font-weight: 600;
+    color: var(--gray-100);
+  }
+}
+
+@media screen and(max-width:1024px) {
+  .player {
+    font-size: 0.9rem;
+  }
+}

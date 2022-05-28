@@ -1,18 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { IPlayer } from 'api/ladder';
 import s from './index.module.scss';
 
-interface IPlayerProps {
-  name: string;
-  score: number;
-}
+// interface IPlayerProps extends IPlayer {
+//   onMouseEnter: () => void;
+//   onMouseLeave: () => void;
+// }
 
-const Player: React.FC<IPlayerProps> = (props) => {
-  const { name, score } = props;
+const Player: React.FC<IPlayer> = (props) => {
+  const { name, id, score } = props;
 
   return (
-    <div className={s.player}>
-      <span>{name}</span> <span>{score}</span>
-    </div>
+    <Link to={`${id}`} className={s.player}>
+      <div className={s.content}>
+        <span className={s.name}>{name}</span> <span>{score}</span>
+      </div>
+    </Link>
   );
 };
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @import './root.scss';
 
 html {
@@ -16,7 +16,7 @@ body {
   font-family: var(--font);
   cursor: default;
   color: #fff;
-  background-color: var(--gray-80);
+  background-color: var(--gray-70);
 }
 section {
   position: relative;
@@ -89,4 +89,9 @@ h6 {
   font-size: 1.25rem;
   letter-spacing: 0.0075em;
   color: var(--blue-100);
+}
+@media screen and (max-width: 1024px) {
+  h4 {
+    font-size: 1.5rem;
+  }
 }

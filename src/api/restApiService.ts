@@ -61,11 +61,11 @@ class RestAPI {
     return service;
   };
 
-  public get = (
+  public get<T>(
     path = '',
     params?: object,
     headers?: AxiosRequestHeaders
-  ): Promise<AxiosResponse> => {
+  ): Promise<AxiosResponse<T>> {
     const service = this.create(headers);
 
     return service.request({
@@ -73,13 +73,13 @@ class RestAPI {
       url: `${this.url}${path}`,
       params
     });
-  };
+  }
 
-  public post = (
+  public post<T>(
     path = '',
     data: object = {},
     headers?: AxiosRequestHeaders
-  ): Promise<AxiosResponse> => {
+  ): Promise<AxiosResponse<T>> {
     const service = this.create(headers);
 
     return service.request({
@@ -87,13 +87,13 @@ class RestAPI {
       url: `${this.url}${path}`,
       data
     });
-  };
+  }
 
-  public put = (
+  public put<T>(
     path = '',
     data: object = {},
     headers?: AxiosRequestHeaders
-  ): Promise<AxiosResponse> => {
+  ): Promise<AxiosResponse<T>> {
     const service = this.create(headers);
 
     return service.request({
@@ -101,14 +101,14 @@ class RestAPI {
       url: `${this.url}${path}`,
       data
     });
-  };
+  }
 
-  public delete = (
+  public delete<T>(
     path = '',
     data: object = {},
     params: object = {},
     headers?: AxiosRequestHeaders
-  ): Promise<AxiosResponse> => {
+  ): Promise<AxiosResponse<T>> {
     const service = this.create(headers);
 
     return service.request({
@@ -119,7 +119,7 @@ class RestAPI {
       },
       params
     });
-  };
+  }
 }
 
 export default new RestAPI();

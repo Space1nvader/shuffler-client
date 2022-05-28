@@ -1,0 +1,31 @@
+.game {
+  margin-bottom: 2rem;
+  border: 1px solid var(--gray-90);
+  padding: 1.4rem 1rem 1rem;
+  box-sizing: border-box;
+}
+.date {
+  width: 100%;
+  font-size: 0.8rem;
+  color: var(--gray-40);
+}
+.teams {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 0.4rem);
+    left: calc(50% - 0.8rem);
+    width: 1.6rem;
+    height: 1px;
+    background-color: var(--gray-30);
+    transform: rotate(-45deg);
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+}
