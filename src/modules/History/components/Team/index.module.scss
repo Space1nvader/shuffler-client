@@ -1,10 +1,16 @@
 .team {
-  margin: 0.2rem 0 1rem;
   max-width: 43%;
-  position: relative;
+  margin: 0.2rem 0 1rem;
   &:nth-child(even) {
     text-align: right;
   }
+}
+.players {
+  width: fit-content;
+  position: relative;
+}
+.info {
+  transition: height 0.3s;
 }
 .icon {
   position: absolute;
