@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
+import Loader from 'components/Loader';
 import PageFrame from 'components/PageFrame';
 import PageTitle from 'components/PageTitle';
 import Player from './components/Player';
@@ -17,10 +18,13 @@ const Statistic = () => {
     <PageFrame>
       <PageTitle>Статистика</PageTitle>
       <div className={s.list}>
-        {!loading &&
+        {loading ? (
+          <Loader style={{ height: 'calc(100% - 5rem)' }} />
+        ) : (
           success &&
           data.players.length &&
-          data.players.map((player) => <Player key={player.id} {...player} />)}
+          data.players.map((player) => <Player key={player.id} {...player} />)
+        )}
       </div>
     </PageFrame>
   );

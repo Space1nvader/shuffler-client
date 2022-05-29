@@ -1,26 +1,5 @@
-.statistic {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.frame {
-  position: relative;
-}
-.title {
-  margin-bottom: 2rem;
-  display: block;
-  font-family: var(--font-press-start);
-  letter-spacing: -0.2rem;
-}
-
-.ladder {
-  width: 35rem;
-}
-
 .list {
   padding-right: 1rem;
-  height: 14rem;
-  max-height: 100vh;
+  height: calc(100% - 5rem);
   overflow: auto;
 }
