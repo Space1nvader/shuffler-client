@@ -1,9 +1,14 @@
 .player {
   margin-bottom: 0.2rem;
   color: var(--gray-60);
+  display: block;
   &.current {
+    pointer-events: none;
     font-weight: 600;
     color: var(--gray-100);
+  }
+  &:not(.current):hover {
+    color: var(--orange-40);
   }
 }
 

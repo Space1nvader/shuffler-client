@@ -6,6 +6,7 @@ import PageFrame from 'components/PageFrame';
 import PageTitle from 'components/PageTitle';
 import { historyStore } from 'modules/History/store/history';
 import Game from './components/Game';
+import PlayerInfo from './components/PlayerInfo';
 import s from './index.module.scss';
 
 const History = () => {
@@ -20,6 +21,10 @@ const History = () => {
   return (
     <PageFrame>
       <PageTitle>История</PageTitle>
+
+      {/* 
+      TODO USER PROFILE WITH API
+      {id && <PlayerInfo id={id} />} */}
       <div className={s.list}>
         {loading ? (
           <Loader style={{ height: 'calc(100% - 5rem)' }} />

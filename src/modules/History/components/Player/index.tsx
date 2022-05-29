@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { useParams } from 'react-router';
 import { IPlayer } from 'api/ladder';
+import PlayerLink from 'components/PlayerLink';
 import s from './index.module.scss';
 
 const Player = (props: IPlayer) => {
@@ -10,7 +11,11 @@ const Player = (props: IPlayer) => {
 
   const isCurrent = Number(id) === playerId;
 
-  return <div className={clsx(s.player, isCurrent && s.current)}>{name}</div>;
+  return (
+    <PlayerLink id={playerId} className={clsx(s.player, isCurrent && s.current)}>
+      {name}
+    </PlayerLink>
+  );
 };
 
 export default Player;

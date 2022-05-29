@@ -1,6 +1,6 @@
 import React from 'react';
 
-type ClassName = { className?: string };
+type ExtendedFC = { className?: string; style?: React.CSSProperties };
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-export type IFC<D = {}> = React.FC<ClassName & D>;
+export type IFC<D = {}> = React.FC<ExtendedFC & D>;

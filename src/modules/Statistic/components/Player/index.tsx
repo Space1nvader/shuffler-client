@@ -1,17 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { IPlayer } from 'api/ladder';
+import PlayerLink from 'components/PlayerLink';
 import s from './index.module.scss';
 
 const Player: React.FC<IPlayer> = (props) => {
   const { name, id, score } = props;
 
   return (
-    <Link to={`${id}`} title={`Просмотреть историю ${name}`} className={s.player}>
+    <PlayerLink id={id} className={s.player}>
       <div className={s.content}>
         <span className={s.name}>{name}</span> <span className={s.score}>{score}</span>
       </div>
-    </Link>
+    </PlayerLink>
   );
 };
 

@@ -1,0 +1,8 @@
+.player {
+  color: var(--orange-50);
+  transition: color 0.1s;
+  background-color: transparent;
+  &:hover {
+    color: var(--orange-60);
+  }
+}
