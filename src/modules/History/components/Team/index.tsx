@@ -11,17 +11,18 @@ interface IHistoryTeamProps extends ITeam {
 }
 
 const Team = (props: IHistoryTeamProps) => {
-  const { players, isWinners, isHover } = props;
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const { players, isWinners } = props;
 
   return (
-    <div className={clsx(s.team, isHover && s.hover)}>
+    <div className={s.team}>
       <div className={s.players}>
         {isWinners && <CrownIcon className={s.icon} />}
         {players.map((player: IPlayer) => (
           <Player key={player.id} {...player} />
         ))}
       </div>
+      {/* // TODO: Детальная информация команд и игроков при наведении
+       (количество полученных очков, командный рейтинг) */}
       {/* {isHover && <div className={s.info}>team mmr: 123</div>} */}
     </div>
   );
