@@ -4,7 +4,6 @@
   align-items: center;
   width: 100%;
   padding-bottom: 0.4rem;
-  color: var(--gray-80);
   position: relative;
   counter-increment: ladder;
   border-bottom: 1px solid var(--gray-70);
@@ -14,8 +13,10 @@
     content: counter(ladder) '.';
   }
 }
+
 .score {
   color: var(--gray-60) !important;
+  letter-spacing: 0.1rem;
 }
 
 .content {
