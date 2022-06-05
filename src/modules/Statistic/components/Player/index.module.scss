@@ -1,7 +1,7 @@
 .player {
   margin-bottom: 0.5rem;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   padding-bottom: 0.4rem;
   position: relative;
@@ -16,8 +16,9 @@
 }
 
 .score {
+  // font-family: var(--font-press-start);
   color: var(--gray-60) !important;
-  letter-spacing: 0.1rem;
+  letter-spacing: -0.02rem;
 }
 
 .content {
