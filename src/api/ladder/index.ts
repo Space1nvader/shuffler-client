@@ -18,7 +18,7 @@ export interface ILadderResponse<T> {
 
 const LadderApi = {
   getLadder(pathname: string): Promise<AxiosResponse<ILadderResponse<ILadderData>>> {
-    return RestAPI.get(`/chat/beta?discipline=${pathname}`);
+    return RestAPI.get(`chat/beta?discipline=${pathname}`);
   }
 };
 
