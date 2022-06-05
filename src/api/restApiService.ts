@@ -6,7 +6,7 @@ class RestAPI {
   headers: AxiosRequestHeaders;
 
   constructor() {
-    this.url = 'http://localhost:8081/api/';
+    this.url = 'http://localhost:8082/api/';
     this.headers = {
       Accept: 'application/json',
       'Content-Type': 'application/json',

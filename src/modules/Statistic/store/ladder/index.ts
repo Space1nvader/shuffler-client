@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import { makeAutoObservable, toJS } from 'mobx';
+import { makeAutoObservable, runInAction, toJS } from 'mobx';
 import SERVICE_API from 'api';
 import { ILadderData } from 'api/ladder';
 import { initialAsyncState, IAsyncState } from 'store/utils/asyncStoreHelpers';
@@ -12,27 +12,32 @@ const initialState: IAsyncState<ILadderData> = {
 export const ladderStore = makeAutoObservable({
   ladder: initialState,
   getState(): IAsyncState<ILadderData> {
-    return toJS(ladderStore.ladder);
+    return toJS(this.ladder);
   },
 
   async getLadderAction() {
-    ladderStore.ladder.loading = true;
-    ladderStore.ladder.success = false;
-    ladderStore.ladder.errors = null;
+    runInAction(() => {
+      this.ladder.loading = true;
+      this.ladder.success = false;
+      this.ladder.errors = null;
+    });
 
     try {
       const { data } = await SERVICE_API.ladderApi.getLadder();
-
-      ladderStore.ladder = {
-        data: data.payload,
-        errors: data.errors,
-        success: true,
-        loading: false
-      };
+      runInAction(() => {
+        this.ladder = {
+          data: data.payload,
+          errors: data.errors,
+          success: true,
+          loading: false
+        };
+      });
     } catch (errors: unknown) {
-      ladderStore.ladder.errors = errors;
-      ladderStore.ladder.loading = false;
-      ladderStore.ladder.success = false;
+      runInAction(() => {
+        this.ladder.errors = errors;
+        this.ladder.loading = false;
+        this.ladder.success = false;
+      });
     }
   }
 });
