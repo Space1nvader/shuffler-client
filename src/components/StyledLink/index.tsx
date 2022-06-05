@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import { IFC } from 'types';
 import s from './index.module.scss';
 
-const StyledLink: IFC<{ to: string }> = (props) => {
-  const { to, children, className } = props;
+const StyledLink: IFC<{ to: string; [key: string]: any }> = (props) => {
+  const { to, children, className, ...other } = props;
 
   return (
-    <Link className={clsx(s.link, className && className)} to={to}>
+    <Link className={clsx(s.link, className && className)} to={to} {...other}>
       {children}
     </Link>
   );

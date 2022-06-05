@@ -16,7 +16,9 @@ const Statistic = () => {
   const { data, loading, success, errors } = ladderStore.getState();
 
   useEffect(() => {
-    ladderStore.getLadderAction(pathname.slice(1));
+    const pathArray = pathname.split('/');
+
+    ladderStore.getLadderAction(pathArray[pathArray.length - 1]);
   }, [pathname]);
 
   return (
