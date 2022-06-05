@@ -2,6 +2,7 @@
   "name": "kicker-webclient",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://space1nvader.github.io/shaffler-client/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -13,6 +14,7 @@
     "@types/react-router": "5.1.17",
     "clsx": "^1.1.1",
     "date-fns": "^2.28.0",
+    "gh-pages": "^4.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router": "^6.3.0",
@@ -24,8 +26,9 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "set REACT_APP_API_URL=http://80.85.139.74:8800/api/&& react-scripts start",
-    "build": "react-scripts build",
+    "build": "set REACT_APP_API_URL=http://80.85.139.74:8800/api/&& react-scripts build",
     "test": "react-scripts test",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "browserslist": {

@@ -10,7 +10,7 @@ export const disciplineRoutes = [
     component: <Statistic />
   },
   {
-    path: '/ping_pong',
+    path: '/pong',
     name: 'Пинг понг',
     component: <Statistic />
   },
