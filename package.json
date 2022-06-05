@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "set REACT_APP_API_URL=http://80.85.139.74:8800&& react-scripts start",
+    "dev": "set REACT_APP_API_URL=http://80.85.139.74:8800/api/&& react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

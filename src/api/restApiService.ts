@@ -10,17 +10,18 @@ class RestAPI {
     this.headers = {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      'Cache-Control': 'max-age=5256000' // 2 month,
+      'Cache-Control': 'max-age=5256000'
+      // 2 month,
     };
 
     // this.tokenName = tokenName;
   }
 
-  handleSuccess = (response: AxiosResponse): AxiosResponse => response;
+  private handleSuccess = (response: AxiosResponse): AxiosResponse => response;
 
   // TODO: Описать текста ошибок для запросов
   // TODO: Переработать формат текста ошибок для нескольких языков(Interface = IMultiLangText)
-  handleError = (error: AxiosError): Promise<object> | void => {
+  private handleError = (error: AxiosError): Promise<object> | void => {
     switch (error?.response?.status) {
       case 404:
         return Promise.reject(new Error('Ничего не найдено Ошибка 404'));
@@ -63,8 +64,8 @@ class RestAPI {
 
   public get<T>(
     path = '',
-    params?: object,
-    headers?: AxiosRequestHeaders
+    params: object = {},
+    headers: AxiosRequestHeaders = {}
   ): Promise<AxiosResponse<T>> {
     const service = this.create(headers);
 
@@ -78,7 +79,7 @@ class RestAPI {
   public post<T>(
     path = '',
     data: object = {},
-    headers?: AxiosRequestHeaders
+    headers: AxiosRequestHeaders = {}
   ): Promise<AxiosResponse<T>> {
     const service = this.create(headers);
 
@@ -92,7 +93,7 @@ class RestAPI {
   public put<T>(
     path = '',
     data: object = {},
-    headers?: AxiosRequestHeaders
+    headers: AxiosRequestHeaders = {}
   ): Promise<AxiosResponse<T>> {
     const service = this.create(headers);
 
@@ -107,7 +108,7 @@ class RestAPI {
     path = '',
     data: object = {},
     params: object = {},
-    headers?: AxiosRequestHeaders
+    headers: AxiosRequestHeaders = {}
   ): Promise<AxiosResponse<T>> {
     const service = this.create(headers);
 

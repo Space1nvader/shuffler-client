@@ -1,5 +1,4 @@
-import React, { useRef } from 'react';
-import clsx from 'clsx';
+import React from 'react';
 import { ITeam } from 'api/history';
 import { IPlayer } from 'api/ladder';
 import CrownIcon from 'components/Icons/CrownIcon';

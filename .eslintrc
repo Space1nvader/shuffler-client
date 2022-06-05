@@ -45,6 +45,7 @@
     "func-names": "off",
     "no-plusplus": "off",
     "prefer-const": "error",
+    "class-methods-use-this": "off",
     "padding-line-between-statements": [
       "error",
       { "blankLine": "always", "prev": "*", "next": "return" },
