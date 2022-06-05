@@ -52,8 +52,7 @@ class RestAPI {
         ...this.headers,
         ...headers
         // ...headerAuth
-      },
-      withCredentials: true
+      }
       //   cancelToken: cancel.token
     });
     service.interceptors.response.use(this.handleSuccess, this.handleError);
