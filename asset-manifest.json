@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/shaffler-client/static/css/main.7c743074.css",
-    "main.js": "/shaffler-client/static/js/main.acf1ca85.js",
-    "static/js/787.bf700658.chunk.js": "/shaffler-client/static/js/787.bf700658.chunk.js",
-    "index.html": "/shaffler-client/index.html",
-    "main.7c743074.css.map": "/shaffler-client/static/css/main.7c743074.css.map",
-    "main.acf1ca85.js.map": "/shaffler-client/static/js/main.acf1ca85.js.map",
-    "787.bf700658.chunk.js.map": "/shaffler-client/static/js/787.bf700658.chunk.js.map"
+    "main.css": "/shuffler-client/static/css/main.7c743074.css",
+    "main.js": "/shuffler-client/static/js/main.49ebac8f.js",
+    "static/js/787.bf700658.chunk.js": "/shuffler-client/static/js/787.bf700658.chunk.js",
+    "index.html": "/shuffler-client/index.html",
+    "main.7c743074.css.map": "/shuffler-client/static/css/main.7c743074.css.map",
+    "main.49ebac8f.js.map": "/shuffler-client/static/js/main.49ebac8f.js.map",
+    "787.bf700658.chunk.js.map": "/shuffler-client/static/js/787.bf700658.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7c743074.css",
-    "static/js/main.acf1ca85.js"
+    "static/js/main.49ebac8f.js"
   ]
 }
