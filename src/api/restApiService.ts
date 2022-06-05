@@ -11,6 +11,7 @@ class RestAPI {
       Accept: 'application/json',
       'Content-Type': 'application/json',
       'Cache-Control': 'max-age=5256000'
+      // credentials: 'include'
       // 2 month,
     };
 
