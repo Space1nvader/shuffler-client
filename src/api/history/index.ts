@@ -19,7 +19,7 @@ export interface IHistoryData {
 
 export interface IHistoryResponse<T> {
   payload: T;
-  errors: unknown;
+  errors: Error | null;
 }
 
 const HistoryApi = {

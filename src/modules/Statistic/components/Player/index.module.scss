@@ -7,6 +7,7 @@
   position: relative;
   counter-increment: ladder;
   border-bottom: 1px solid var(--gray-70);
+  color: var(--gray-90);
   &::before {
     font-size: 0.9rem;
     color: var(--gray-40);

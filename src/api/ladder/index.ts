@@ -13,12 +13,12 @@ export interface ILadderData {
 
 export interface ILadderResponse<T> {
   payload: T;
-  errors: unknown;
+  errors: Error;
 }
 
 const LadderApi = {
-  getLadder(): Promise<AxiosResponse<ILadderResponse<ILadderData>>> {
-    return RestAPI.get(`ladder`);
+  getLadder(pathname: string): Promise<AxiosResponse<ILadderResponse<ILadderData>>> {
+    return RestAPI.get(`/chat/beta?discipline=${pathname}`);
   }
 };
 

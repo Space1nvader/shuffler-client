@@ -15,7 +15,7 @@ export const ladderStore = makeAutoObservable({
     return toJS(this.ladder);
   },
 
-  async getLadderAction() {
+  async getLadderAction(pathname: string) {
     runInAction(() => {
       this.ladder.loading = true;
       this.ladder.success = false;
@@ -23,7 +23,7 @@ export const ladderStore = makeAutoObservable({
     });
 
     try {
-      const { data } = await SERVICE_API.ladderApi.getLadder();
+      const { data } = await SERVICE_API.ladderApi.getLadder(pathname);
       runInAction(() => {
         this.ladder = {
           data: data.payload,
@@ -34,7 +34,7 @@ export const ladderStore = makeAutoObservable({
       });
     } catch (errors: unknown) {
       runInAction(() => {
-        this.ladder.errors = errors;
+        this.ladder.errors = errors as Error;
         this.ladder.loading = false;
         this.ladder.success = false;
       });

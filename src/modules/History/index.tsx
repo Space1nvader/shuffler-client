@@ -20,7 +20,7 @@ const History = () => {
 
   return (
     <PageFrame>
-      <PageTitle>История</PageTitle>
+      <PageTitle withBackButton>История</PageTitle>
 
       {/* 
       TODO USER PROFILE WITH API

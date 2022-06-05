@@ -34,7 +34,7 @@ export const historyStore = makeAutoObservable({
       });
     } catch (errors: unknown) {
       runInAction(() => {
-        this.history.errors = errors;
+        this.history.errors = errors as Error;
         this.history.loading = false;
         this.history.success = false;
       });

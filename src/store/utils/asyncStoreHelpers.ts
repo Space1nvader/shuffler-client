@@ -2,7 +2,7 @@ export type IAsyncState<T = []> = {
   data: T;
   loading: boolean;
   success: boolean;
-  errors: unknown;
+  errors: Error | null;
 };
 
 export const initialAsyncState = {

@@ -1,0 +1,7 @@
+$focus-color: var(--blue-70);
+
+a, button, input, textarea {
+    &:focus-visible{
+        outline: 1px solid $focus-color;
+    }
+}

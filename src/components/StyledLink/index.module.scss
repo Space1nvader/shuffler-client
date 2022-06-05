@@ -1,0 +1,10 @@
+.link {
+  padding: 0.4rem 1rem;
+  box-sizing: border-box;
+  border: 1px solid var(--gray-90);
+  color: var(--gray-90);
+  transition: all 0.2s;
+  &:hover {
+    background-color: var(--orange-40);
+  }
+}
