@@ -10,9 +10,7 @@ class RestAPI {
     this.headers = {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      'Cache-Control': 'max-age=5256000'
-      // credentials: 'include'
-      // 2 month,
+      'Cache-Control': 'max-age=5256000' // 2 month,
     };
 
     // this.tokenName = tokenName;
