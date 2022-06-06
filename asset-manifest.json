@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/shuffler-client/static/css/main.7c743074.css",
-    "main.js": "/shuffler-client/static/js/main.201b03bc.js",
+    "main.js": "/shuffler-client/static/js/main.888b0302.js",
     "static/js/787.bf700658.chunk.js": "/shuffler-client/static/js/787.bf700658.chunk.js",
     "index.html": "/shuffler-client/index.html",
     "main.7c743074.css.map": "/shuffler-client/static/css/main.7c743074.css.map",
-    "main.201b03bc.js.map": "/shuffler-client/static/js/main.201b03bc.js.map",
+    "main.888b0302.js.map": "/shuffler-client/static/js/main.888b0302.js.map",
     "787.bf700658.chunk.js.map": "/shuffler-client/static/js/787.bf700658.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7c743074.css",
-    "static/js/main.201b03bc.js"
+    "static/js/main.888b0302.js"
   ]
 }
