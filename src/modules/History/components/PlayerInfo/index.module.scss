@@ -1,11 +1,46 @@
 .info {
+  margin-bottom: 1.4rem;
+}
+.header {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 .avatar {
   margin-right: 0.6rem;
 }
 .title {
   font-size: 1.2rem;
+  display: block;
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.score {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.played {
+  justify-content: flex-end;
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.games {
+  padding-left: 0.6rem;
+  margin-bottom: 0.2rem;
+  &.wins {
+    color: var(--green-40);
+  }
+  &.looses {
+    color: var(--red-40);
+  }
+}
+.winrate {
+  font-size: 0.9rem;
+  color: var(--gray-100);
+  text-align: right;
+  width: 100%;
 }

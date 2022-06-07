@@ -7,8 +7,10 @@
   position: relative;
   counter-increment: ladder;
   border-bottom: 1px solid var(--gray-70);
+  font-weight: 600;
   color: var(--gray-90);
   &::before {
+    font-weight: 500;
     font-size: 0.9rem;
     color: var(--gray-40);
     content: counter(ladder) '.';
@@ -16,7 +18,7 @@
 }
 
 .score {
-  // font-family: var(--font-press-start);
+  font-weight: 500;
   color: var(--gray-60) !important;
   letter-spacing: -0.02rem;
 }

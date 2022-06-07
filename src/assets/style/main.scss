@@ -99,3 +99,17 @@ h6 {
     font-size: 1.5rem;
   }
 }
+*::-webkit-scrollbar {
+    // width: .5%;
+    width: 10px;
+    min-width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: 0 0
+}
+
+*::-webkit-scrollbar-thumb {
+    border: 1px solid var(--gray-70);
+    background: var(--orange-40)
+}

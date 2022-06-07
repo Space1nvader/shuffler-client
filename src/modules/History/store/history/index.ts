@@ -6,7 +6,8 @@ import { initialAsyncState, IAsyncState } from 'store/utils/asyncStoreHelpers';
 
 const initialState: IAsyncState<IHistoryData> = {
   ...initialAsyncState,
-  data: { games: [] }
+  // data: { games: [] }
+  data: []
 };
 
 export const historyStore = makeAutoObservable({
@@ -26,8 +27,8 @@ export const historyStore = makeAutoObservable({
       const { data } = await SERVICE_API.historyApi.getHistory(id);
       runInAction(() => {
         this.history = {
-          data: data.payload,
-          errors: data.errors,
+          data,
+          errors: null,
           success: true,
           loading: false
         };

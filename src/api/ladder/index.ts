@@ -1,4 +1,5 @@
 import { AxiosResponse } from 'axios';
+import disciplineStore from 'store/disciplines';
 import RestAPI from '../restApiService';
 
 export interface IPlayer {
@@ -11,14 +12,12 @@ export interface ILadderData {
   players: IPlayer[] | [];
 }
 
-export interface ILadderResponse<T> {
-  payload: T;
-  errors: Error;
-}
-
 const LadderApi = {
-  getLadder(pathname: string): Promise<AxiosResponse<ILadderResponse<ILadderData>>> {
-    return RestAPI.get(`chat/beta?discipline=${pathname}`);
+  getLadder(): Promise<AxiosResponse<ILadderData>> {
+    // Удаляет ковычки которые подкладывает localstorage
+    const path = disciplineStore.getDisciplinePath();
+
+    return RestAPI.get(`chat/beta?discipline=${path}`);
   }
 };
 

@@ -7,7 +7,7 @@ import PageTitle from 'components/PageTitle';
 const Group = () => (
   <PageFrame>
     <PageTitle>Группы</PageTitle>
-    <Navigate to="kicker" />
+    <Navigate to="ladder" />
   </PageFrame>
 );
 

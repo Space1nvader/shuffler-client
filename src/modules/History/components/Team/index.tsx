@@ -10,12 +10,12 @@ interface IHistoryTeamProps extends ITeam {
 }
 
 const Team = (props: IHistoryTeamProps) => {
-  const { players, isWinners } = props;
+  const { players, winner } = props;
 
   return (
     <div className={s.team}>
       <div className={s.players}>
-        {isWinners && <CrownIcon className={s.icon} />}
+        {winner && <CrownIcon className={s.icon} />}
         {players.map((player: IPlayer) => (
           <Player key={player.id} {...player} />
         ))}

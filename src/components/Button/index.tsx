@@ -7,11 +7,11 @@ export interface IButtonProps
     React.AriaAttributes {}
 
 const Button: React.FC<IButtonProps> = (props) => {
-  const { children, className = '', type = 'button' } = props;
+  const { children, className = '', type = 'button', ...other } = props;
 
   return (
     // eslint-disable-next-line react/button-has-type
-    <button type={type} className={clsx(s.button, className)}>
+    <button type={type} className={clsx(s.button, className)} {...other}>
       {children}
     </button>
   );

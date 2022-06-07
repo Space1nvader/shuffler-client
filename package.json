@@ -1,6 +1,6 @@
 {
-  "name": "kicker-webclient",
-  "version": "0.1.0",
+  "name": "shuffler-client",
+  "version": "0.2.1",
   "private": true,
   "homepage": "https://space1nvader.github.io/shuffler-client/",
   "dependencies": {
@@ -26,9 +26,10 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "set REACT_APP_API_URL=http://80.85.139.74:8800/api/&& react-scripts start",
-    "build": "set REACT_APP_API_URL=http://80.85.139.74:8800/api/&& react-scripts build",
-    "test": "react-scripts test",
+    "build": "react-scripts build",
     "deploy": "gh-pages -d build",
+    "build-gh": "set REACT_APP_BASE_URL=/shuffler-client&& set REACT_APP_API_URL=http://80.85.139.74:8800/api/&& react-scripts build && npm run deploy",
+    "test": "set REACT_APP_BASE_URL=/shuffler-client&& react-scripts start",
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -58,6 +59,7 @@
     "eslint-plugin-react-hooks": "4.3.0",
     "mobx": "^6.6.0",
     "mobx-react-lite": "^3.4.0",
-    "sass": "^1.45.2"
+    "sass": "^1.45.2",
+    "use-local-storage": "^2.3.6"
   }
 }
