@@ -17,7 +17,7 @@ const LadderApi = {
     // Удаляет ковычки которые подкладывает localstorage
     const path = disciplineStore.getDisciplinePath();
 
-    return RestAPI.get(`chat/beta?discipline=${path}`);
+    return RestAPI.get(`chat/sberworks?discipline=${path}`);
   }
 };
 

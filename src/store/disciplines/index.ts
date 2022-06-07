@@ -3,13 +3,6 @@ import { makeAutoObservable, runInAction } from 'mobx';
 import useLocalStorage from 'use-local-storage';
 import { Discipline } from './types';
 
-// useDisciplineStore =
-// export const getDiscipline = () => (;
-
-// export const setDiscipline = (value: Discipline): void => {
-//   localStorage.setItem('discipline', value);
-// };
-
 const disciplineStore = makeAutoObservable(
   {
     discipline: (localStorage.getItem('discipline') as Discipline) || 'kicker',
@@ -37,5 +30,3 @@ export const useDisciplineStore = () => {
 
   return useMemo(() => ({ discipline, setDiscipline }), [discipline]);
 };
-
-// export const getDisciplineFromStorage = () => localStorage.getItem('discipline') || 'kicker';

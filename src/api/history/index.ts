@@ -14,17 +14,14 @@ export interface ITeam {
   winner: boolean;
 }
 
-// export interface IHistoryData {
-//   games: IGame[] | [];
-// }
-export type IHistoryData = IGame[] | [];
+export interface IHistoryData {
+  games: IGame[] | [];
+}
 
 const HistoryApi = {
   getHistory(id?: string): Promise<AxiosResponse<IHistoryData>> {
-    // /api/history/<playerId>?discipline=<discName>;season=<seasonId>;chat=<chatId>
     const path = disciplineStore.getDisciplinePath();
 
-    // return RestAPI.get(`history${id && `/${id}`}?discipline=${path}`);
     return RestAPI.get(`history${id && `/${id}`}?discipline=${path}`);
   }
 };

@@ -6,8 +6,7 @@ import { initialAsyncState, IAsyncState } from 'store/utils/asyncStoreHelpers';
 
 const initialState: IAsyncState<IHistoryData> = {
   ...initialAsyncState,
-  // data: { games: [] }
-  data: []
+  data: { games: [] }
 };
 
 export const historyStore = makeAutoObservable({

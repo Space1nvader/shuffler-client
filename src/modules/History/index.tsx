@@ -25,7 +25,7 @@ const History = () => {
       {id && <PlayerInfo id={id} />}
       <div>
         <RestController loading={loading} success={success} errors={errors}>
-          {!!data.length && data.map((game) => <Game key={game.id} {...game} />)}
+          {!!data.games.length && data.games.map((game) => <Game key={game.id} {...game} />)}
         </RestController>
       </div>
     </PageFrame>
