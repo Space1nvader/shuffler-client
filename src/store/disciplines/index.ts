@@ -3,12 +3,12 @@ import { makeAutoObservable, runInAction } from 'mobx';
 import useLocalStorage from 'use-local-storage';
 import { Discipline } from './types';
 
+const initialState =
+  (localStorage.getItem('discipline') as Discipline).replace(/['"]+/g, '') || 'kicker';
+
 const disciplineStore = makeAutoObservable(
   {
-    discipline: (localStorage.getItem('discipline') as Discipline) || 'kicker',
-    getDisciplinePath(): string {
-      return this.discipline.replace(/['"]+/g, '');
-    },
+    discipline: initialState,
     setDisciplineState(value: Discipline) {
       runInAction(() => {
         this.discipline = value;

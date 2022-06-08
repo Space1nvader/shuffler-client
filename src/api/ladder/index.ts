@@ -15,9 +15,9 @@ export interface ILadderData {
 const LadderApi = {
   getLadder(): Promise<AxiosResponse<ILadderData>> {
     // Удаляет ковычки которые подкладывает localstorage
-    const path = disciplineStore.getDisciplinePath();
+    const { discipline } = disciplineStore;
 
-    return RestAPI.get(`chat/sberworks?discipline=${path}`);
+    return RestAPI.get(`chat/sberworks?discipline=${discipline}`);
   }
 };
 

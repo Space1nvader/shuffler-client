@@ -20,9 +20,9 @@ export interface IHistoryData {
 
 const HistoryApi = {
   getHistory(id?: string): Promise<AxiosResponse<IHistoryData>> {
-    const path = disciplineStore.getDisciplinePath();
+    const { discipline } = disciplineStore;
 
-    return RestAPI.get(`history${id && `/${id}`}?discipline=${path}`);
+    return RestAPI.get(`history${id && `/${id}`}?discipline=${discipline}`);
   }
 };
 

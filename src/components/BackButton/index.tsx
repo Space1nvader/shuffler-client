@@ -12,7 +12,7 @@ const BackButton: IFC = ({ className = '' }) => {
   return (
     <button
       type="button"
-      onClick={() => navigate(-1)}
+      onClick={() => navigate('/ladder')}
       title="Вернуться назад"
       className={clsx(s.button, className && className)}
     >
