@@ -2,7 +2,6 @@
   "name": "shuffler-client",
   "version": "0.2.1",
   "private": true,
-  "homepage": "https://space1nvader.github.io/shuffler-client/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",

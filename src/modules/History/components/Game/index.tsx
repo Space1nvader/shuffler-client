@@ -20,8 +20,7 @@ const Game = (props: IGame) => {
           <Team key={`${id}-team-${i}`} {...team} isHover={isHover} />
         ))}
       </div>
-      <div className={s.date}>{format(date, 'dd.MM.yy')}</div>
-      {/* <div className={s.date}>{date}</div> */}
+      <div className={s.date}>{format(date, 'kk:mm  dd.MM.yyyy')}</div>
     </div>
   );
 };

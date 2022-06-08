@@ -4,6 +4,7 @@
 
 html {
   font-size: 16px;
+    background-color: var(--gray-70);
 }
 * {
   outline: none;
@@ -19,6 +20,7 @@ body {
   cursor: default;
   color: #fff;
   background-color: var(--gray-70);
+
 }
 section {
   position: relative;

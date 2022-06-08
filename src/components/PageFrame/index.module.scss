@@ -9,25 +9,40 @@
 .frame {
   width: 30rem;
   height: 45rem;
-  max-height: 100vh;
+  max-height: 100%;
   padding: 2rem;
   padding-right: 1rem;
-}
-.container {
-  max-height: calc(100vh - 2rem);
-}
-.scrolling {
-  overflow-y: auto;
   max-height: 100%;
+}
+
+.scrolling {
+  max-height: 100%;
+  overflow-y: auto;
   padding-right: 1rem;
 }
 
 @media screen and (max-width: 1024px) {
+  .screen {
+    align-items: flex-start;
+    min-height: auto;
+    max-height: 90vh;
+  }
   .container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    // bottom: 0;
+    // bottom: calc(1rem + env(safe-area-inset-bottom));
   }
   .frame {
+    margin: 2rem 0 1rem;
+    order: -1;
     width: 100%;
-    padding: 2rem 1rem;
+    max-height: calc(100vh - 13rem);
+    padding: 2rem 1.5rem;
+    padding-right: 0.5rem;
+  }
+  .scrolling {
+    padding-right: 0.5rem;
   }
 }
