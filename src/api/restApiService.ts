@@ -1,7 +1,5 @@
 import axios, { AxiosError, AxiosResponse, AxiosInstance, AxiosRequestHeaders } from 'axios';
 
-
-
 class RestAPI {
   url: string;
 
@@ -12,7 +10,7 @@ class RestAPI {
     this.headers = {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      'Cache-Control': 'max-age=5256000' // 2 month,
+      'Cache-Control': 'max-age=5256000, must-revalidate' // 2 month,
     };
 
     // this.tokenName = tokenName;

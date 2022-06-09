@@ -27,7 +27,7 @@ export const ladderStore = makeAutoObservable(
 
         runInAction(() => {
           this.ladder = {
-            data,
+            data: data.payload,
             errors: null,
             success: true,
             loading: false

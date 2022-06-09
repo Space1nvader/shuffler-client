@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import { makeAutoObservable, runInAction, toJS } from 'mobx';
 import SERVICE_API from 'api';
 import { IHistoryData } from 'api/history';
@@ -26,7 +25,7 @@ export const historyStore = makeAutoObservable({
       const { data } = await SERVICE_API.historyApi.getHistory(id);
       runInAction(() => {
         this.history = {
-          data,
+          data: data.payload,
           errors: null,
           success: true,
           loading: false
