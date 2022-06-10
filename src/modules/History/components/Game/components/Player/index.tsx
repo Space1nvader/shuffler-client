@@ -19,7 +19,7 @@ const Player = (props: IHisotryPlayerProps) => {
   return (
     <>
       <PlayerLink id={playerId} className={clsx(s.player, isCurrent && s.current)}>
-        {name} {name}
+        {name}
       </PlayerLink>
       {isCurrent && score && <PlayerScoreDiff change={change} score={score} />}
     </>
