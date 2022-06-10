@@ -1,33 +1,24 @@
 .game {
   margin-bottom: 1rem;
   border: 1px solid var(--gray-90);
-  padding: 1.4rem 1rem 1rem;
+  padding: 0.6rem 1rem 0.8rem;
   box-sizing: border-box;
+  position: relative;
 }
-.date {
-  width: 100%;
-  text-align: right;
-  font-size: 0.8rem;
-  color: var(--gray-70);
-  letter-spacing: 0.02rem;
-}
+
 .teams {
   display: flex;
   justify-content: space-between;
-  position: relative;
+}
+.info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 
-  &::after,
-  &::before {
-    content: '';
-    position: absolute;
-    top: calc(50% - 0.4rem);
-    left: calc(50% - 0.8rem);
-    width: 1.6rem;
-    height: 1px;
-    background-color: var(--gray-30);
-    transform: rotate(-45deg);
-  }
-  &::before {
-    transform: rotate(45deg);
-  }
+.date {
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--gray-80);
+  letter-spacing: 0.02rem;
 }

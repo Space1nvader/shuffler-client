@@ -35,11 +35,13 @@ const PlayerInfo: IFC<{ id: number | string }> = (props) => {
       </div>
       <div className={s.stats}>
         <div className={s.score}>Счет: {player.score}</div>
-        <div className={s.played}>
-          <span className={clsx(s.games, s.wins)}>W: {player.winCount}</span>
-          <span className={clsx(s.games, s.looses)}>L: {player.loseCount}</span>
-          <div className={s.winrate}>Winrate: {winrate}%</div>
-        </div>
+        {!Number.isNaN(winrate) && (
+          <div className={s.played}>
+            <span className={clsx(s.games, s.wins)}>W: {player.winCount}</span>
+            <span className={clsx(s.games, s.looses)}>L: {player.loseCount}</span>
+            <div className={s.winrate}>Winrate: {winrate}%</div>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -2,8 +2,12 @@
   display: flex;
   min-width: 2rem;
   max-width: 2rem;
+  transition: opacity 0.2s;
   & > svg {
     fill: var(--orange-50);
     width: 100%;
+  }
+  &:hover {
+    opacity: 0.8;
   }
 }

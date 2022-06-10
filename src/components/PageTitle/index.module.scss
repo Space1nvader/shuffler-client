@@ -3,15 +3,20 @@
   font-family: var(--font-press-start);
   display: flex;
   align-items: center;
+  z-index: 2;
   position: relative;
 }
 
 .buttonPlace {
-  position: absolute;
   width: 2rem;
+  z-index: 1;
+  position: relative;
 }
 
 .title {
   text-align: center;
-  width: 100%;
+  width: calc(100% + 2rem);
+  padding: 0 2rem;
+  box-sizing: border-box;
+  margin-left: -2rem;
 }

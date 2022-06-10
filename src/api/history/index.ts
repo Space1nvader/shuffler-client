@@ -8,6 +8,7 @@ export interface IGame {
   id: number;
   teams: ITeam[];
   date: number;
+  change: number;
 }
 
 export interface ITeam {

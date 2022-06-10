@@ -1,0 +1,20 @@
+.score {
+  font-weight: 500;
+  position: absolute;
+  bottom: 0.7rem;
+  left: 1rem;
+  color: var(--gray-50);
+  font-size: 0.9rem;
+}
+
+.diff {
+  font-size: 1rem;
+  display: inline-block;
+  margin-right: 0.2rem;
+  &.positive {
+    color: var(--green-50);
+  }
+  &.negative {
+    color: var(--red-50);
+  }
+}
