@@ -3,10 +3,13 @@ import axios, { AxiosError, AxiosResponse, AxiosInstance, AxiosRequestHeaders } 
 class RestAPI {
   url: string;
 
+  baseUrl: string;
+
   headers: AxiosRequestHeaders;
 
   constructor() {
-    this.url = `${process.env.REACT_APP_API_URL}/api/` || '/api/';
+    this.baseUrl = process.env.REACT_APP_API_URL || window.location.origin;
+    this.url = `${this.baseUrl}/api/`;
     this.headers = {
       Accept: 'application/json',
       'Content-Type': 'application/json',
