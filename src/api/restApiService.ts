@@ -6,7 +6,7 @@ class RestAPI {
   headers: AxiosRequestHeaders;
 
   constructor() {
-    this.url = `${process.env.REACT_APP_API_URL}/api` || '/api';
+    this.url = `${process.env.REACT_APP_API_URL}/api/` || '/api/';
     this.headers = {
       Accept: 'application/json',
       'Content-Type': 'application/json',
