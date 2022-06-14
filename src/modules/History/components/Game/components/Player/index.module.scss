@@ -1,9 +1,11 @@
 .player {
-  margin-bottom: 0.2rem;
   color: var(--gray-80);
   display: block;
   border-bottom: 1px solid transparent;
   transition: border 0.2s;
+  &:first-of-type {
+    margin-bottom: 0.3rem;
+  }
   &.current {
     pointer-events: none;
     font-weight: 700;
