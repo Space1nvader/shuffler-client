@@ -29,7 +29,7 @@ const History = () => {
       <div>
         <RestController loading={loading} success={success} errors={errors}>
           {data.games.length !== 0 ? (
-            data.games.map((game) => <Game key={game.id} {...game} />)
+            data.games.map((game) => <Game key={game.id} playerId={id} {...game} />)
           ) : (
             <Messege>
               <img style={{ marginBottom: '.4rem', width: '3rem' }} src={sadgeImage} alt="Sadge" />

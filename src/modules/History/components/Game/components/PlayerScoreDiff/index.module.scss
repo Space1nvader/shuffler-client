@@ -3,7 +3,7 @@
   position: absolute;
   bottom: 0.7rem;
   left: 1rem;
-  color: var(--gray-50);
+  color: var(--gray-70);
   font-size: 0.9rem;
 }
 
@@ -12,9 +12,9 @@
   display: inline-block;
   margin-right: 0.2rem;
   &.positive {
-    color: var(--green-50);
+    color: var(--green-60);
   }
   &.negative {
-    color: var(--red-50);
+    color: var(--red-60);
   }
 }

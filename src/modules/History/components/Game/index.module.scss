@@ -1,24 +1,43 @@
 .game {
   margin-bottom: 1rem;
-  border: 1px solid var(--gray-90);
-  padding: 0.6rem 1rem 0.8rem;
+  border: 1px solid var(--gray-30);
+  border-radius: 4px;
+  padding: 0.8rem 1rem 0.8rem;
   box-sizing: border-box;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--red-20);
 }
-
+.isWinner {
+  background-color: var(--green-20);
+  color: #fff;
+}
 .teams {
+  width: 60%;
+  padding-left: 1rem;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
 }
 .info {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  width: calc(40% - 1rem);
+  padding-right: 1rem;
+  box-sizing: border-box;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: var(--gray-30);
+  }
 }
 
 .date {
-  text-align: right;
-  font-size: 0.8rem;
-  color: var(--gray-80);
-  letter-spacing: 0.02rem;
+  padding-top: 0.1rem;
+  font-size: 0.85rem;
+  color: var(--gray-90);
 }

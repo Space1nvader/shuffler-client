@@ -1,25 +1,9 @@
 .players {
   width: fit-content;
 }
-.info {
-  transition: height 0.3s;
-}
-.iconWrapper {
-  position: relative;
-}
-.icon {
-  position: absolute;
-  width: 0.9rem;
-  bottom: calc(100% + 4px);
-  left: calc(50% - 0.45rem);
-  fill: var(--orange-40);
-  stroke: var(--gray-90);
-}
 
 .team {
-  padding-top: 1rem;
   max-width: 43%;
-  margin: 0 0 1rem;
   &:nth-child(even) {
     text-align: right;
   }
