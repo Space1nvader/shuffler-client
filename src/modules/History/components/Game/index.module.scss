@@ -14,16 +14,18 @@
   color: #fff;
 }
 .teams {
-  width: 55%;
+  width: 60%;
   padding-left: 1rem;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
 }
 .info {
-  width: calc(45% - 1rem);
+  width: calc(40% - 1rem);
   padding-right: 1rem;
   box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
   position: relative;
   &::after {
     content: '';
@@ -40,4 +42,13 @@
   padding-top: 0.1rem;
   font-size: 0.85rem;
   color: var(--gray-90);
+}
+
+@media screen and(max-width: 1024px) {
+  .teams {
+    width: 55%;
+  }
+  .info {
+    width: calc(45% - 1rem);
+  }
 }
