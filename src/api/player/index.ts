@@ -7,7 +7,6 @@ import { IResponse } from '../types';
 export interface IPlayerDetails extends IPlayer {
   winCount: number;
   loseCount: number;
-  avatar?: string;
 }
 
 export interface IPlayerResponse {

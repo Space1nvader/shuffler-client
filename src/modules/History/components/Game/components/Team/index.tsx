@@ -5,15 +5,16 @@ import Player from '../Player';
 import s from './index.module.scss';
 
 interface IHistoryTeamProps extends ITeam {
-  isHover?: boolean;
+  isDetailsActive?: boolean;
   change: number;
 }
 
 const Team = (props: IHistoryTeamProps) => {
-  const { players, change } = props;
+  const { players, change, isDetailsActive } = props;
 
   return (
     <div className={s.team}>
+      {/* {isDetailsActive && <div> Team MMR: 1000</div>} */}
       <div className={s.players}>
         {players.map((player: IPlayer) => (
           <Player key={player.id} change={change} {...player} />
