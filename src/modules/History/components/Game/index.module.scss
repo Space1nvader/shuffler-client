@@ -21,7 +21,7 @@
   justify-content: space-between;
 }
 .info {
-  width: calc(40% - 1rem);
+  width: 40%;
   padding-right: 1rem;
   box-sizing: border-box;
   display: flex;
@@ -39,16 +39,7 @@
 }
 
 .date {
-  padding-top: 0.1rem;
+  padding-top: 1.2rem;
   font-size: 0.85rem;
   color: var(--gray-90);
-}
-
-@media screen and(max-width: 1024px) {
-  .teams {
-    width: 55%;
-  }
-  .info {
-    width: calc(45% - 1rem);
-  }
 }
