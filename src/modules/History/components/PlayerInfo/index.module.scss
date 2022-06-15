@@ -1,23 +1,12 @@
 .info {
   position: relative;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.2rem;
   border: 1px solid var(--gray-30);
   border-radius: 4px;
   box-sizing: border-box;
   padding: 1rem 1rem 1.1rem;
 }
-.header {
-  display: flex;
-  align-items: center;
-}
-.avatar {
-  margin-right: 0.8rem;
-}
-.title {
-  min-height: 30px;
-  font-size: 1.2rem;
-  display: block;
-}
+
 .stats {
   display: flex;
   justify-content: space-between;
