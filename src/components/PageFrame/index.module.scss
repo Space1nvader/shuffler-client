@@ -15,8 +15,12 @@
   max-height: 100%;
 }
 
-.scrolling {
-  max-height: 100%;
+.title {
+  height: 2.4rem;
+  margin-bottom: 2rem;
+}
+.scroll {
+  max-height: calc(100% - 4.4rem);
   overflow-y: auto;
   padding-right: 1rem;
 }
@@ -24,25 +28,21 @@
 @media screen and (max-width: 1024px) {
   .screen {
     align-items: flex-start;
-    min-height: auto;
-    max-height: 90vh;
+    box-sizing: border-box;
+    padding-bottom: 3rem; // 3.6rem bottom nav height
   }
   .container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    // bottom: 0;
-    // bottom: calc(1rem + env(safe-area-inset-bottom));
   }
   .frame {
-    margin: 2rem 0 1rem;
     order: -1;
     width: 100%;
-    max-height: calc(100vh - 13rem);
-    padding: 2rem 1.5rem;
-    padding-right: 0.5rem;
+    height: auto;
+    padding: 2rem 0;
   }
-  .scrolling {
-    padding-right: 1rem;
+  .scroll {
+    padding-right: 0;
   }
 }

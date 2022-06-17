@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
 import PageFrame from 'components/PageFrame';
-import PageTitle from 'components/PageTitle';
 import RestController from 'components/RestController';
 import disciplineStore from 'store/disciplines';
 import Player from './components/Player';
@@ -18,8 +17,7 @@ const Statistic = () => {
   }, [discipline]);
 
   return (
-    <PageFrame>
-      <PageTitle>Статистика</PageTitle>
+    <PageFrame title="Статистика">
       <div className={s.container}>
         <RestController loading={loading} success={success} errors={errors}>
           <div className={s.list}>

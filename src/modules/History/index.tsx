@@ -21,10 +21,8 @@ const History = () => {
   }, [discipline, id]);
 
   return (
-    <PageFrame>
-      <PageTitle withBackButton>История</PageTitle>
+    <PageFrame withBackButton title="История">
       {id && <PlayerInfo id={id} />}
-
       <RestController loading={loading} success={success} errors={errors}>
         <GameList games={data.games} id={id} />
       </RestController>
