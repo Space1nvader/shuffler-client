@@ -18,3 +18,13 @@
     background-color: var(--orange-50);
   }
 }
+
+@media screen and(max-width: 1024px) {
+  .frame {
+    border: none;
+    border-radius: 0;
+    &:before {
+      display: none;
+    }
+  }
+}

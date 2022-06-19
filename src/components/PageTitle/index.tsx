@@ -8,9 +8,9 @@ const PageTitle: IFC<{ withBackButton?: boolean; [key: string]: unknown }> = (pr
   const { children, className, withBackButton, ...other } = props;
 
   return (
-    <div className={s.header}>
+    <div className={clsx(s.header, className && className)}>
       <div className={s.buttonPlace}>{withBackButton && <BackButton />}</div>
-      <h4 className={clsx(s.title, className && className)} {...other}>
+      <h4 className={s.title} {...other}>
         {children}
       </h4>
     </div>
