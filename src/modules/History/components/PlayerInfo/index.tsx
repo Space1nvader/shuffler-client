@@ -30,7 +30,7 @@ const PlayerInfo: IFC<{ id: number | string }> = (props) => {
         </div>
       )}
       <div className={s.header}>
-        {!player.avatar ? <Avatar className={s.avatar} /> : 'avatar'}
+        {player.avatar ? <Avatar src={player.avatar} className={s.avatar} /> : 'avatar'}
         <h5 className={s.title}>{player.name}</h5>
       </div>
       <div className={s.stats}>
