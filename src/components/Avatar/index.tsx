@@ -9,7 +9,11 @@ const Avatar: IFC<{ src?: string }> = (props) => {
 
   return (
     <div className={clsx(s.avatar, className && className)}>
-      {src ? <img src={src} alt="Профиль" /> : <AvatarIcon className={s.icon} />}
+      {src ? (
+        <img className={s.image} src={src} alt="Профиль" />
+      ) : (
+        <AvatarIcon className={s.icon} />
+      )}
     </div>
   );
 };
