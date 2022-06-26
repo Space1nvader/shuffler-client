@@ -17,21 +17,24 @@ const RestController: IFC<IRestProps> = (props) => {
     errors: <Error error={errors} />,
     success: children as JSX.Element
   };
+
   const [state, setState] = useState<keyof typeof stateMap>('loading');
+
   useEffect(() => {
-    if (children) {
-      return setState('success');
+    switch (true) {
+      case !!children:
+        setState('success');
+        break;
+      case loading:
+        setState('loading');
+        break;
+      case !!errors:
+        setState('errors');
+        break;
+      default:
+        setState('success');
+        break;
     }
-
-    if (loading) {
-      return setState('loading');
-    }
-
-    if (errors) {
-      return setState('errors');
-    }
-
-    return setState('success');
   }, [success, errors, loading]);
 
   return stateMap[state] as JSX.Element;
