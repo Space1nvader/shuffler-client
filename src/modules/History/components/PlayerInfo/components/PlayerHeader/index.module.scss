@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.content {
+  display: flex;
+}
+.avatar {
+  margin-right: 0.8rem;
+}
+.title {
+  min-height: 30px;
+  font-size: 1.2rem;
+  display: block;
+}
+
+.graphButton {
+  padding: 0.2rem 0.8rem;
+  background-color: var(--gray-10);
+
+  &:hover {
+    background-color: var(--orange-20);
+  }
+  &.active {
+    background-color: var(--orange-40);
+  }
+}
+
+@media screen and(max-width: 1024px) {
+  .graphButton {
+    &:hover {
+      background-color: var(--gray-10);
+    }
+    &.active {
+      background-color: var(--orange-40);
+    }
+  }
+}

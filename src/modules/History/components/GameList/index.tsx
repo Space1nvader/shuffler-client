@@ -24,7 +24,7 @@ const GameList: IFC<{ games: IGame[]; id?: string }> = (props) => {
   };
 
   return (
-    <div>
+    <div className={s.games}>
       {games.length !== 0 ? (
         games.map((game) => (
           <div key={game.id}>

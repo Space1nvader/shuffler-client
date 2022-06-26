@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import clsx from 'clsx';
 import AvatarIcon from 'components/Icons/AvatarIcon';
 import { IFC } from 'types';
@@ -10,7 +10,7 @@ const Avatar: IFC<{ src?: string }> = (props) => {
   return (
     <div className={clsx(s.avatar, className && className)}>
       {src ? (
-        <img className={s.image} src={src} alt="Профиль" />
+        <img className={s.image} src={src} alt="Профиль игрока" />
       ) : (
         <AvatarIcon className={s.icon} />
       )}
@@ -18,4 +18,4 @@ const Avatar: IFC<{ src?: string }> = (props) => {
   );
 };
 
-export default Avatar;
+export default memo(Avatar);
