@@ -7,7 +7,12 @@ import { useDisciplineStore } from 'store/disciplines';
 import { Discipline } from 'store/disciplines/types';
 import s from './index.module.scss';
 
-export const disciplineRoutes: { name: string; path: Discipline }[] = [
+export type IDisciplineRoute = {
+  name: string;
+  path: Discipline;
+};
+
+export const disciplineRoutes: IDisciplineRoute[] = [
   {
     name: 'Кикер',
     path: 'kicker'
@@ -17,6 +22,7 @@ export const disciplineRoutes: { name: string; path: Discipline }[] = [
     path: 'pong'
   }
 ];
+
 const DisciplinesMenu = () => {
   const { discipline, setDiscipline } = useDisciplineStore();
 

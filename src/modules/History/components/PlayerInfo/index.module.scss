@@ -6,7 +6,17 @@
   box-sizing: border-box;
   padding: 1rem 1rem 1.1rem;
 }
-
+.header {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  margin-right: 0.8rem;
+}
+.title {
+  font-size: 1.2rem;
+  display: block;
+}
 .stats {
   display: flex;
   justify-content: space-between;

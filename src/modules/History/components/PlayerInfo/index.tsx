@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { observer } from 'mobx-react-lite';
+import Avatar from 'components/Avatar';
 import Loader from 'components/Loader';
 import disciplineStore from 'store/disciplines';
 import { IFC } from 'types';
@@ -28,11 +29,27 @@ const PlayerInfo: IFC<{ id: string }> = (props) => {
   const winrate = Math.round((player.winCount / games) * 100);
 
   return (
-    <div>
-      <div className={s.info}>
-        {loading && (
-          <div className={s.loader}>
-            <Loader />
+    <div className={s.info}>
+      {loading && (
+        <div className={s.loader}>
+          <Loader />
+        </div>
+      )}
+      <div className={s.header}>
+        <Avatar src={player.avatar} className={s.avatar} />
+        <h5 className={s.title}>{player.name}</h5>
+      </div>
+      <div className={s.stats}>
+        <div className={s.score}>Счет: {player.score}</div>
+        {!Number.isNaN(winrate) && (
+          <div className={s.played}>
+            <span title="Победы" className={clsx(s.games, s.wins)}>
+              W: {player.winCount}
+            </span>
+            <span title="Поражения" className={clsx(s.games, s.looses)}>
+              L: {player.loseCount}
+            </span>
+            <div className={s.winrate}>Winrate: {winrate}%</div>
           </div>
         )}
         <PlayerHeader
