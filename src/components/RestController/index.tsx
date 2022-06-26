@@ -17,7 +17,7 @@ const RestController: IFC<IRestProps> = (props) => {
     errors: <Error error={errors} />,
     success: children as JSX.Element
   };
-  const [state, setState] = useState<keyof typeof stateMap>('success');
+  const [state, setState] = useState<keyof typeof stateMap>('loading');
   useEffect(() => {
     if (children) {
       return setState('success');

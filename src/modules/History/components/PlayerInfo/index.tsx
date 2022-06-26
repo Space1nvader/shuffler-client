@@ -23,6 +23,8 @@ const PlayerInfo: IFC<{ id: string }> = (props) => {
   };
   useEffect(() => {
     playerStore.getPlayerAction(id);
+
+    return () => playerStore.resetPlayerAction();
   }, [id, discipline]);
 
   const winrate = useMemo(() => {

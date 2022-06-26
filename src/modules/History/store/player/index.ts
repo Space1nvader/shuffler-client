@@ -38,5 +38,10 @@ export const playerStore = makeAutoObservable({
         this.player.success = false;
       });
     }
+  },
+  resetPlayerAction(): void {
+    runInAction(() => {
+      this.player = initialState;
+    });
   }
 });

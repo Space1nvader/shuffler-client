@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react';
-import { format } from 'date-fns';
 import { observer } from 'mobx-react-lite';
 import { useParams } from 'react-router';
-import Messege from 'components/Messege';
 import PageFrame from 'components/PageFrame';
-import PageTitle from 'components/PageTitle';
 import RestController from 'components/RestController';
 import { historyStore } from 'modules/History/store/history';
 import disciplineStore from 'store/disciplines';
@@ -18,13 +15,15 @@ const History = () => {
 
   useEffect(() => {
     historyStore.getHistoryAction(id);
+
+    return () => historyStore.resetHistoryAction();
   }, [discipline, id]);
 
   return (
     <PageFrame withBackButton title="История">
       {id && <PlayerInfo id={id} />}
       <RestController loading={loading} success={success} errors={errors}>
-        <GameList games={data.games} id={id} />
+        {success && <GameList games={data.games} id={id} />}
       </RestController>
     </PageFrame>
   );

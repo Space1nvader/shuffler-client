@@ -38,5 +38,10 @@ export const historyStore = makeAutoObservable({
         this.history.success = false;
       });
     }
+  },
+  resetHistoryAction() {
+    runInAction(() => {
+      this.history = initialState;
+    });
   }
 });
