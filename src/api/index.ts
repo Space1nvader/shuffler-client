@@ -1,4 +1,4 @@
-import graphsApi from './graphs';
+import graphApi from './graphs';
 import historyApi from './history';
 import ladderApi from './ladder';
 import playerApi from './player';
@@ -7,7 +7,7 @@ const SERVICE_API = {
   ladderApi,
   historyApi,
   playerApi,
-  graphsApi
+  graphApi
 };
 
 export default SERVICE_API;

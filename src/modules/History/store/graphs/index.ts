@@ -5,26 +5,26 @@ import { initialAsyncState, IAsyncState } from 'store/utils/asyncStoreHelpers';
 
 const initialState: IAsyncState<IGraphsData> = {
   ...initialAsyncState,
-  data: { graphs: [] }
+  data: {}
 };
 
 export const graphsStore = makeAutoObservable({
-  graphs: initialState,
+  graph: initialState,
   getState(): IAsyncState<IGraphsData> {
-    return toJS(this.graphs);
+    return toJS(this.graph);
   },
 
-  async getGraphsAction(id: string) {
+  async getGraphAction(id: string) {
     runInAction(() => {
-      this.graphs.loading = true;
-      this.graphs.success = false;
-      this.graphs.errors = null;
+      this.graph.loading = true;
+      this.graph.success = false;
+      this.graph.errors = null;
     });
 
     try {
-      const { data } = await SERVICE_API.graphsApi.getGraphs(id);
+      const { data } = await SERVICE_API.graphApi.getGraph(id);
       runInAction(() => {
-        this.graphs = {
+        this.graph = {
           data: data.payload,
           errors: null,
           success: true,
@@ -33,9 +33,9 @@ export const graphsStore = makeAutoObservable({
       });
     } catch (errors: unknown) {
       runInAction(() => {
-        this.graphs.errors = errors as Error;
-        this.graphs.loading = false;
-        this.graphs.success = false;
+        this.graph.errors = errors as Error;
+        this.graph.loading = false;
+        this.graph.success = false;
       });
     }
   }

@@ -6,20 +6,20 @@ import { IResponse } from '../types';
 export type IGraphPoint = { date: number; score: number };
 
 export interface IGraph {
-  playerId: number;
+  playerId?: number;
   coordinates: IGraphPoint[];
 }
 
 export interface IGraphsData {
-  graphs: IGraph[] | [];
+  graph?: IGraph;
 }
 
-const GraphsApi = {
-  getGraphs(id: string | number): Promise<AxiosResponse<IResponse<IGraphsData>>> {
+const GraphApi = {
+  getGraph(id: string | number): Promise<AxiosResponse<IResponse<IGraphsData>>> {
     const { discipline } = disciplineStore;
 
-    return RestAPI.get(`graphs?discipline=${discipline}&player=${id}`);
+    return RestAPI.get(`graph/${id}?discipline=${discipline}&chatname=sberworks`);
   }
 };
 
-export default GraphsApi;
+export default GraphApi;

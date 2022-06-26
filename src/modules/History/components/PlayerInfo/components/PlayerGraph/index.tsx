@@ -9,20 +9,19 @@ import s from './index.module.scss';
 const PlayerGraph: IFC<{ id: string }> = (props) => {
   const { id } = props;
   const { data, loading, success, errors } = graphsStore.getState();
+  const isEmptyData = !data.graph?.coordinates.length;
   useEffect(() => {
-    if (!data.graphs.length) graphsStore.getGraphsAction(id);
+    if (isEmptyData) graphsStore.getGraphAction(id);
   }, [id]);
-
-  //   data.graphs.map((graph) => {
-  //     console.log(graph);
-
-  //     return undefined;
-  //   });
 
   return (
     <div className={s.graph}>
       <RestController loading={loading} success={success} errors={errors}>
-        {!!data.graphs.length && <LineGraph data={data.graphs[0]} />}
+        {
+          // @ts-ignore
+          // Обход ts-бага, при котором он считает проверку на undefind невалидной из переменной isEmptyData
+          !isEmptyData && <LineGraph data={data.graph} />
+        }
       </RestController>
     </div>
   );

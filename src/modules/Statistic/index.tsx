@@ -20,10 +20,13 @@ const Statistic = () => {
     <PageFrame title="Статистика">
       <div className={s.container}>
         <RestController loading={loading} success={success} errors={errors}>
-          <div className={s.list}>
-            {data.players.length &&
-              data.players.map((player) => <Player key={player.id} {...player} />)}
-          </div>
+          {!!data.players.length && (
+            <div className={s.list}>
+              {data.players.map((player) => (
+                <Player key={player.id} {...player} />
+              ))}
+            </div>
+          )}
         </RestController>
       </div>
     </PageFrame>

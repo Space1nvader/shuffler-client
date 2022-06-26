@@ -11,24 +11,27 @@ export interface IRestProps {
 
 const RestController: IFC<IRestProps> = (props) => {
   const { loading, success, errors, children } = props;
+
   const stateMap = {
     loading: <Loader />,
     errors: <Error error={errors} />,
     success: children as JSX.Element
   };
-  const [state, setState] = useState<keyof typeof stateMap>('loading');
+  const [state, setState] = useState<keyof typeof stateMap>('success');
   useEffect(() => {
-    if (loading) {
-      setState('loading');
+    if (children) {
+      return setState('success');
     }
 
-    if (success) {
-      setState('success');
+    if (loading) {
+      return setState('loading');
     }
 
     if (errors) {
-      setState('errors');
+      return setState('errors');
     }
+
+    return setState('success');
   }, [success, errors, loading]);
 
   return stateMap[state] as JSX.Element;

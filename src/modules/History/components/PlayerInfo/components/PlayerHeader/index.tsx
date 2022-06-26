@@ -13,16 +13,16 @@ const PlayerHeader = (props: { toggleActiveGraphHandler: () => void; isActiveGra
   return (
     <div className={s.header}>
       <div className={s.content}>
-        {!avatar ? <Avatar className={s.avatar} /> : 'avatar'}
+        <Avatar src={avatar} className={s.avatar} />
         <h5 className={s.title}>{name}</h5>
       </div>
-
-      <Button
+      {/* TODO: График */}
+      {/* <Button
         onClick={toggleActiveGraphHandler}
         className={clsx(s.graphButton, isActiveGraph && s.active)}
       >
         График
-      </Button>
+      </Button> */}
     </div>
   );
 };
