@@ -22,9 +22,6 @@ const RestController: IFC<IRestProps> = (props) => {
 
   useEffect(() => {
     switch (true) {
-      case !!children:
-        setState('success');
-        break;
       case loading:
         setState('loading');
         break;
