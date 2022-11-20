@@ -13,7 +13,7 @@ const Player: React.FC<IPlayer> = (props) => {
         <span className={s.user}>
           <Avatar src={avatar} className={s.avatar} /> {name}
         </span>
-        <span className={s.score}>{score}</span>
+        <span className={s.score}>{score || 'Калибровка'}</span>
       </div>
     </PlayerLink>
   );
