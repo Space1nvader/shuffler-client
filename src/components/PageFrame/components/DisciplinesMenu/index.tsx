@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { observer } from 'mobx-react-lite';
 import Button from 'components/Button';
-import PapperFrame from 'components/PapperFrame';
+import PaperFrame from 'components/PaperFrame';
 import { useDisciplineStore } from 'store/disciplines';
 import { Discipline } from 'store/disciplines/types';
 import s from './index.module.scss';
@@ -27,7 +27,7 @@ const DisciplinesMenu = () => {
   const { discipline, setDiscipline } = useDisciplineStore();
 
   return (
-    <PapperFrame className={s.disciplines}>
+    <PaperFrame className={s.disciplines}>
       {disciplineRoutes.map((route) => (
         <Button
           key={route.path}
@@ -37,7 +37,7 @@ const DisciplinesMenu = () => {
           {route.name}
         </Button>
       ))}
-    </PapperFrame>
+    </PaperFrame>
   );
 };
 

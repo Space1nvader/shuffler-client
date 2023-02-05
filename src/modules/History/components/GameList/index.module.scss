@@ -1,6 +1,10 @@
 .games {
   position: relative;
   min-height: 8rem;
+  max-height: 30rem;
+  margin-right: -1rem;
+  padding-right: 1rem;
+  overflow: auto;
 }
 
 .date {
@@ -8,4 +12,11 @@
   font-weight: 500;
   color: var(--gray-70);
   margin: 1.4rem 0 0.6rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .games {
+    max-height: fit-content;
+    overflow: hidden;
+  }
 }

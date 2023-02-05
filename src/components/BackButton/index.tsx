@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { useNavigate } from 'react-router';
 
 import ArrowIcon from 'components/Icons/ArrowIcon';
-import { IFC } from 'types';
+
 import s from './index.module.scss';
 
 const BackButton: IFC = ({ className = '' }) => {

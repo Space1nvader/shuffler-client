@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import clsx from 'clsx';
 import AvatarIcon from 'components/Icons/AvatarIcon';
-import { IFC } from 'types';
+
 import s from './index.module.scss';
 
 const Avatar: IFC<{ src?: string }> = (props) => {

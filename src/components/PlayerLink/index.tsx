@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
-import { IFC } from 'types';
+
 import s from './index.module.scss';
 
 interface IPlayerLinkProps {

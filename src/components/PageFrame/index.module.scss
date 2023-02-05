@@ -8,41 +8,30 @@
 
 .frame {
   width: 30rem;
-  height: 45rem;
-  max-height: 100%;
+  min-height: 45rem;
   padding: 2rem;
-  padding-right: 1rem;
-  max-height: 100%;
 }
 
 .title {
   height: 2.4rem;
   margin-bottom: 2rem;
 }
-.scroll {
-  max-height: calc(100% - 4.4rem);
-  overflow-y: auto;
-  padding-right: 1rem;
-}
 
 @media screen and (max-width: 1024px) {
   .screen {
     align-items: flex-start;
     box-sizing: border-box;
-    padding-bottom: 3rem; // 3.6rem bottom nav height
   }
-  .container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+
+  .title {
+    margin-bottom: 1rem;
   }
+
   .frame {
     order: -1;
     width: 100%;
-    height: auto;
-    padding: 2rem 0;
-  }
-  .scroll {
-    padding-right: 0;
+    height: 100%;
+    padding: 1rem 0;
+    max-height: fit-content;
   }
 }

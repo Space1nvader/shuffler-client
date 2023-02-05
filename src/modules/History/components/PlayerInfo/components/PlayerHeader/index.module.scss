@@ -3,14 +3,16 @@
   align-items: center;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
 }
+
 .content {
   display: flex;
 }
+
 .avatar {
   margin-right: 0.8rem;
 }
+
 .title {
   min-height: 30px;
   font-size: 1.2rem;
@@ -18,6 +20,7 @@
 }
 
 .graphButton {
+  margin-bottom: 1rem;
   padding: 0.2rem 0.8rem;
   background-color: var(--gray-10);
 
@@ -37,5 +40,11 @@
     &.active {
       background-color: var(--orange-40);
     }
+  }
+  .title {
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

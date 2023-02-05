@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import BackButton from 'components/BackButton';
-import { IFC } from 'types';
+
 import s from './index.module.scss';
 
 const PageTitle: IFC<{ withBackButton?: boolean; [key: string]: unknown }> = (props) => {

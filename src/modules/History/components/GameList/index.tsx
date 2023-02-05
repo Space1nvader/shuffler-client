@@ -2,8 +2,7 @@ import React from 'react';
 import { format } from 'date-fns';
 import { IGame } from 'api/history';
 import sadgeImage from 'assets/images/sadge.png';
-import Messege from 'components/Messege';
-import { IFC } from 'types';
+import Message from 'components/Message';
 import Game from '../Game';
 import s from './index.module.scss';
 
@@ -33,10 +32,10 @@ const GameList: IFC<{ games: IGame[]; id?: string }> = (props) => {
           </div>
         ))
       ) : (
-        <Messege>
+        <Message>
           <img style={{ marginBottom: '.4rem', width: '3rem' }} src={sadgeImage} alt="Sadge" />
           <h6>Нет данных</h6>
-        </Messege>
+        </Message>
       )}
     </div>
   );

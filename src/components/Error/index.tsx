@@ -1,5 +1,5 @@
 import React from 'react';
-import { IFC } from 'types';
+
 import s from './index.module.scss';
 
 const Error: IFC<{ error: Error | null }> = (props) => {

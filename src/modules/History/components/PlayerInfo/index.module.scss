@@ -1,31 +1,50 @@
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  margin-bottom: 1rem;
+  background-color: var(--gray-10);
+  &.fixed {
+    position: fixed;
+    & {
+      .info {
+        border-radius: 0;
+        padding: 0.5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .played {
+        display: none;
+      }
+      .score {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
 .info {
   position: relative;
-  margin-bottom: 1.2rem;
   border: 1px solid var(--gray-30);
   border-radius: 4px;
   box-sizing: border-box;
   padding: 1rem 1rem 1.1rem;
 }
-.header {
-  margin-bottom: 1rem;
-}
-.avatar {
-  margin-right: 0.8rem;
-}
-.title {
-  font-size: 1.2rem;
-  display: block;
-}
+
 .stats {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
+
 .score {
   font-weight: 700;
   white-space: nowrap;
   font-size: 1.4rem;
 }
+
 .played {
   justify-content: flex-end;
   font-size: 1rem;
@@ -33,6 +52,7 @@
   display: flex;
   flex-wrap: wrap;
 }
+
 .games {
   padding-left: 0.6rem;
   margin-bottom: 0.2rem;
@@ -44,19 +64,11 @@
     color: var(--red-50);
   }
 }
+
 .winrate {
   font-weight: 500;
   font-size: 0.9rem;
   color: var(--gray-100);
   text-align: right;
   width: 100%;
-}
-
-.loader {
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  background-color: var(--gray-10);
-  position: absolute;
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import clsx from 'clsx';
-import { IFC } from 'types';
+
 import s from './index.module.scss';
 
-const PapperFrame: IFC<{ [key: string]: unknown }> = (props) => {
+const PaperFrame: IFC<{ [key: string]: unknown }> = (props) => {
   const { children, className, ...other } = props;
 
   return (
@@ -13,4 +13,4 @@ const PapperFrame: IFC<{ [key: string]: unknown }> = (props) => {
   );
 };
 
-export default PapperFrame;
+export default PaperFrame;
