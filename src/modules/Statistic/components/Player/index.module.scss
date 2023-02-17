@@ -9,12 +9,12 @@
   counter-increment: ladder;
   border-bottom: 1px solid var(--gray-30);
   font-weight: 600;
-  color: var(--gray-90);
+  color: var(--color-page);
   &::before {
     font-weight: 500;
     min-width: 26px;
     font-size: 1rem;
-    color: var(--gray-40);
+    color: var(--color-secondary);
     content: counter(ladder) '.';
   }
   &:last-of-type {

@@ -7,7 +7,6 @@ import { historyStore } from 'modules/History/store/history';
 import disciplineStore from 'store/disciplines';
 import GameList from './components/GameList';
 import PlayerInfo from './components/PlayerInfo';
-import s from './index.module.scss';
 
 const History = () => {
   const { data, loading, success, errors } = historyStore.getState();

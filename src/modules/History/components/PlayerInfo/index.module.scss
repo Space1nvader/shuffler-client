@@ -4,7 +4,7 @@
   width: 100%;
   z-index: 2;
   margin-bottom: 1rem;
-  background-color: var(--gray-10);
+  background-color: var(--background-page);
   &.fixed {
     position: fixed;
     & {
@@ -27,7 +27,7 @@
 
 .info {
   position: relative;
-  border: 1px solid var(--gray-30);
+  border: 1px solid var(--border-page);
   border-radius: 4px;
   box-sizing: border-box;
   padding: 1rem 1rem 1.1rem;

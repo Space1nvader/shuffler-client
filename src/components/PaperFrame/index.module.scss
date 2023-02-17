@@ -2,10 +2,10 @@
   position: relative;
   max-width: 100%;
   box-sizing: border-box;
-  background-color: var(--gray-10);
-  color: var(--gray-100);
+  background-color: var(--background-page);
+  color: var(--color-page);
   border-radius: 6px;
-  border: 1px solid var(--gray-90);
+  border: 1px solid var(--background-page);
   &::before {
     content: '';
     position: absolute;

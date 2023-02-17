@@ -1,6 +1,7 @@
 import React from 'react';
 
-const AvatarIcon = (props: any) => (
+// TODO: SVG PROPS TYPE
+const AvatarIcon = (props: React.SVGAttributes<undefined>) => (
   <svg
     {...props}
     version="1.1"
@@ -8,8 +9,10 @@ const AvatarIcon = (props: any) => (
     x="0px"
     y="0px"
     viewBox="0 0 55 55"
+    // @ts-ignore
     style={{ enableBackground: 'new 0 0 55 55' }}
     xmlSpace="preserve"
+    fill="var(--icon-fill)"
   >
     <path
       d="M55,27.5C55,12.337,42.663,0,27.5,0S0,12.337,0,27.5c0,8.009,3.444,15.228,8.926,20.258l-0.026,0.023l0.892,0.752
