@@ -19,7 +19,7 @@ export const routes = [
   },
   {
     path: withBasePath('/:id'),
-    name: 'Исптория Игрока',
+    name: 'История Игрока',
     element: <History />
   }
 ];
